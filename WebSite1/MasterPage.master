@@ -1,0 +1,89 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <style type="text/css">
+        html
+        {
+            background-color:deepskyblue;
+        }
+        .columnMenu
+        {
+            float:left;
+            width:250px;
+            border:solid 1px black;
+            padding:5px;
+            background-color:white;
+            min-height:100px;
+        }
+        .columnBody
+        {
+           float:right;
+            width:750px;
+            border:solid 1px black;
+            margin-right:10px;
+            padding:5px;
+            background-color:white;
+            min-height:500px;
+        }
+        
+
+    </style>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        
+        Welcome
+        <asp:Label ID="NameLabel" runat="server"></asp:Label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">Home</asp:LinkButton>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:LinkButton ID="LinkButton2" runat="server" OnClick="LinkButton2_Click">My Account</asp:LinkButton>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:LinkButton ID="LinkButton3" runat="server" OnClick="LinkButton3_Click">Logout</asp:LinkButton>
+        
+        <br />
+        <br />
+        
+        <div class="columnMenu">
+
+         <asp:ContentPlaceHolder ID="contentMenu" runat="server">   
+
+        <asp:Panel ID="Panel1" runat="server" Height="401px" style="margin-top: 0px" Width="331px">
+            <strong>Health Records&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong><br />
+            <asp:LinkButton ID="LinkButton4" runat="server" OnClick="LinkButton4_Click">Conditions</asp:LinkButton>
+            <br />
+            <asp:LinkButton ID="LinkButton5" runat="server" OnClick="LinkButton5_Click">Lab Results</asp:LinkButton>
+            <br />
+            <asp:LinkButton ID="LinkButton6" runat="server" OnClick="LinkButton6_Click">Medications</asp:LinkButton>
+            <br />
+            <asp:LinkButton ID="LinkButton7" runat="server" OnClick="LinkButton7_Click">Visit Summary</asp:LinkButton>
+            <br />
+            <asp:LinkButton ID="LinkButton8" runat="server" OnClick="LinkButton8_Click">Care Plan</asp:LinkButton>
+            <br />
+            <asp:LinkButton ID="LinkButton9" runat="server" OnClick="LinkButton9_Click">My Profile</asp:LinkButton>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       </asp:Panel>
+         </asp:ContentPlaceHolder>
+        </div>
+            
+           
+        <div class ="columnBody">
+            <asp:ContentPlaceHolder id="contentBody" runat="Server" >
+
+            </asp:ContentPlaceHolder>
+        </div>   
+
+       
+      
+        
+    </div>
+    </form>
+</body>
+</html>
